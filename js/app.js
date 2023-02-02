@@ -89,3 +89,24 @@ function isPandigital(number) { // Declares isPandigital as function with number
 
 }
 isPandigital(987654321);
+
+/* 5. printGreeting v2.0
+There is a very rudimentary JavaScript function for receiving user input called prompt().
+
+Usage:
+
+    const userInput = prompt("Please enter some input");
+userInput is now whatever the user entered.
+
+There is another rudimentary JavaScript function for displaying text called alert(). You probably have heard of it. It takes a string as a parameter. Read about it on MDN.
+
+Let’s revisit printGreeting.
+
+First get the userInput as above. Then write a function called printGreeting2 with a parameter name that returns a greeting with the argument interpolated into the greeting as before, but this time use the alert function to display the greeting to the user. */
+
+let userInput = prompt("What is your name?"); // declares variable userInput and display dialog box prompting user to input text
+
+function printGreeting2(userInput) { // declares function taking userInput and displaying pop up box with greeting
+    alert(`Your name is ${userInput}`);
+}
+printGreeting2(userInput);
