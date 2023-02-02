@@ -59,3 +59,33 @@ console.log(calculate(5,5,"sub"));
 console.log(calculate(5,5,"mult"));
 console.log(calculate(5,5,"div"));
 console.log(calculate(5,5,"exp"));
+
+/* 4. pandigital numbers
+Note: The following question is weird, we know. In interviews, you will absolutely be given coding challenges with “weird” questions and you’ll need to be very careful when reading these types of questions to make sure you understand what you’re being asked to do.
+
+A number of length n is 1-to-n pandigital if it makes use of all the digits 1 to n exactly once.
+
+The number 15234 is 1-to-n pandigital because it is 5 numbers long and includes 1, 2, 3, 4, and 5.
+The number 333 is not 1-to-n pandigital.
+The number 0 is not 1-to-n pandigital.
+The number 987654321 is 1-to-n pandigital.
+Write a function that checks if a number is 1-to-n pandigital. */
+
+function isPandigital(number) { // Declares isPandigital as function with number parameter
+    let n = number.toString().length; // declares n variable, converting to string array, finding length
+    let p = Array.from(number.toString()); // creates string array from number declaring p
+    let t = p.sort(); // sorts p array in numerical order
+    let numIsPandigital = false; // decalres numIsPandigital variable as false
+    for (let i = 0; i < n; i++) { // sorts through array
+        if (t[0] === "1" && t[n-1] === n.toString()) { // if t array index 0 is equal to 1, and the last index is equal to length of array - 1 (which would be highest number in the array completing the 1-n pandigital check)
+            numIsPandigital = true;
+        }
+    }
+    if (numIsPandigital) {
+        console.log(`${number} is pandigital`);
+    } else {
+        console.log(`${number} is NOT pandigital`);
+    }
+
+}
+isPandigital(987654321);
