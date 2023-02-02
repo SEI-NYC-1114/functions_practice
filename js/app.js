@@ -39,3 +39,23 @@ Do the same thing for multiplication “mult”, division “div”, and exponen
 console.log(calculate(4, 3, "sub"));=> 1
 console.log(calculate(4, 3, "exp"));=> 64 */
 
+function calculate(num1, num2, operation) { // declares function calculate with parameters num1 num2 num3
+    if (operation === "add") { // if/elseif to determine what operation to perform based on operation argument
+        return num1 + num2;
+    } else if (operation === "sub") {
+        return num1 - num2;
+    } else if (operation === "mult") {
+        return num1 * num2;
+    } else if (operation === "div") {
+        return num1 / num2;
+    } else if (operation === "exp") {
+        return Math.pow(num1, num2); // Math.pow performs exponentation src: https://www.w3schools.com/jsref/jsref_pow.asp
+    } else {
+        return "Invalid Operation";
+    }
+}
+console.log(calculate(5,5,"add"));
+console.log(calculate(5,5,"sub"));
+console.log(calculate(5,5,"mult"));
+console.log(calculate(5,5,"div"));
+console.log(calculate(5,5,"exp"));
