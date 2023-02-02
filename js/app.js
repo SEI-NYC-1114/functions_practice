@@ -104,9 +104,39 @@ Let’s revisit printGreeting.
 
 First get the userInput as above. Then write a function called printGreeting2 with a parameter name that returns a greeting with the argument interpolated into the greeting as before, but this time use the alert function to display the greeting to the user. */
 
-let userInput = prompt("What is your name?"); // declares variable userInput and display dialog box prompting user to input text
+//let userInput = prompt("What is your name?"); // declares variable userInput and display dialog box prompting user to input text
 
-function printGreeting2(userInput) { // declares function taking userInput and displaying pop up box with greeting
-    alert(`Your name is ${userInput}`);
+//function printGreeting2(userInput) { // declares function taking userInput and displaying pop up box with greeting
+  //alert(`Your name is ${userInput}`);
+//}
+//printGreeting2(userInput);
+
+/* 6. Functions + loops: a special partnership
+Write a function that, when called (“call” = “invoke”) creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space (a “white square”) or a # character (representing a black square). Hence, the characters should form a chessboard.
+
+Calling your function should print something like this:
+
+ # # # #
+# # # #
+ # # # #
+# # # #
+ # # # #
+# # # #
+ # # # #
+# # # #
+*/
+function chessBoard() { // the \n creates a new line in the string
+    console.log(" # # # #\n# # # # \n # # # #\n# # # # \n # # # #\n# # # # \n # # # #\n# # # # \n")
 }
-printGreeting2(userInput);
+chessBoard();
+
+/* 7. Modify it to make any size grid.
+When you have a function that generates this pattern, modify it to take a parameter size. Make the function work for any size, outputting a properly formatted grid of the given width and height. If it helps you to have this set. The very first square should always be white.
+
+Remember to give it a nice semantic name
+
+This problem was adapted from one in Eloquent Javascript so hopefully you’ve already seen it because you’ve been reading Eloquent Javascript. If you haven’t yet, read the first 3 chapters (this reads great on a phone, and if you take transit, this is a great thing to read on the train/bus on your way in). Homework will be assigned soon. */
+
+function chessBoard2(width,height) {
+    
+}
